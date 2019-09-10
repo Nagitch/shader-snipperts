@@ -29,7 +29,7 @@ void main( void ) {
 	vec2 pos = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
 	vec2 mousePos = (mouse.xy * 2.0 - 1.0);
 
-	vec3 camPos = vec3(mousePos.x + 1.0, mousePos.y, 0.5 * sin(time/2.0));
+	vec3 camPos = vec3(mousePos.x, mousePos.y, 0.5 * sin(time/2.0));
 	vec3 ray = normalize(vec3(pos, 0.0) - camPos);
 	vec3 curPos = camPos;
 	float dist = 0.0;
